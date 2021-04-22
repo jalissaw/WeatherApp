@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&family=Patua+One&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: Fira Mono, Patua One;
+  background: linear-gradient(90deg, rgb(34 25 213 / 56%) 0%, rgb(28 30 213 / 49%) 33%, rgb(16 99 203 / 74%) 100%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ==== Navbar === */
+
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+  padding: 20px 0px;
+}
+
+.logo {
+  font-size: 1.2rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+.nav-search {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 80%;
+}
+
+.form {
+  width: 40%;
+  position: relative;
+  margin-right: 300px;
+}
+
+.search-input {
+  height: 50px;
+  border-radius: 25px;
+  padding-left: 10px;
+  width: 100%;
+  position: relative;
+  background: #ffffff24;
+  border: white solid 1.5px;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.search-input:focus {
+  border-radius: 25px;
+  border: 1px solid #a3a3f0;
+  outline: 1px solid #3e41cc;
+ }
+
+::placeholder {
+  font-size: 1.2rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  position: absolute;
+  top: 25%;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 1.55rem;
+  color: #5661d6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* ==== Current Weather === */
+
+.weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.city-name {
+  font-size: 3rem;
+  text-align: center;
+  color: #3e41cc96;
+}
+
+.weather-icon {
+  height: auto;
+  object-fit: cover;
+  width: 125px;
+  border-radius: 50%;
+  margin: 20px 0px;
+}
+
+.temp-f {
+  font-size: 4rem;
+  color: white;
+}
+
+.description {
+  color: #ffffffad;
+}
+
+/* ==== Historical Weather === */
+
+.historical-weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  flex-wrap: wrap;
+}
+
+.temp-container {
+  margin: 10px 20px;
+  text-align: center;
+  background: #ffffff24;
+  padding: 40px 15px;
+  
+}
+
+.temp-date {
+  font-size: 1.8rem;
+  color: #3e41cc96;
+}
+
+
+.temp-label {
+  margin: 15px 0px;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.sunrise {
+  margin: 8px 0px;
+}
+
+/* ==== Err Message === */
+
+.err-message {
+  text-align: center;
+  margin-top: 15px;
+  color: white;
+  font-size: 1.5rem;
 }
